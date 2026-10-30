@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "Train model", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["-m", "score_prediction", "train"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []},
+    {"label": "Predict 9.25 hours", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["-m", "score_prediction", "predict", "--hours", "9.25"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []},
+    {"label": "Run tests", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["-m", "pytest", "-q"], "options": {"cwd": "${workspaceFolder}"}, "group": {"kind": "test", "isDefault": true}, "problemMatcher": []}
+  ]
+}
